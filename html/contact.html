@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - LOTUS Hotel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/premium.css">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand brand-animate" href="../html/index.html">
+                <img src="../assets/images/logo.png" alt="LOTUS Logo" class="navbar-logo">
+                <span class="brand-text">LOTUS</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li><a class="nav-link" href="index.html">Home</a></li>
+                    <li><a class="nav-link active" href="contact.html">Contact</a></li>
+                    <li><a class="nav-link" href="booking.html">Book Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero-small" style="min-height: 40vh; display: flex; align-items: center;">
+        <div class="container text-center">
+            <h1 class="display-4 gradient-text mb-4 fade-in-section">Get In Touch</h1>
+            <p class="lead fade-in-section">We'd love to hear from you</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-5 fade-in-section">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Contact Form -->
+                <div class="col-lg-8">
+                    <div class="premium-card p-5">
+                        <h2 class="gradient-text mb-4">Send us a Message</h2>
+                        <form id="contact">
+                            <div class="row mb-4">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">First Name *</label>
+                                    <input type="text" class="form-control" placeholder="First Name" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Last Name *</label>
+                                    <input type="text" class="form-control" placeholder="Last Name" required>
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Email Address *</label>
+                                    <input type="email" class="form-control" placeholder="your@email.com" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" placeholder="Phone">
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label">Subject *</label>
+                                <select class="form-select" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="booking">Booking Inquiry</option>
+                                    <option value="rooms">Room Information</option>
+                                    <option value="services">Services & Amenities</option>
+                                    <option value="feedback">Feedback</option>
+                                    <option value="special">Special Request</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label">Message *</label>
+                                <textarea class="form-control" rows="6" placeholder="Your message here..."
+                                    required></textarea>
+                            </div>
+
+                            <div class="form-check mb-4">
+                                <input class="form-check-input" type="checkbox" id="subscribeNews" checked>
+                                <label class="form-check-label" for="subscribeNews">
+                                    Subscribe to our newsletter
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn btn-gold btn-lg">
+                                <i class="fas fa-paper-plane me-2"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-lg-4">
+                    <!-- Phone -->
+                    <div class="premium-card p-4 mb-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div style="font-size: 2rem; color: var(--color-gold); margin-right: 1rem;">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">Phone</h5>
+                                <p class="mb-0"><a href="tel:+12345678900" style="color: var(--color-gold);">+1 (234)
+                                        567-8900</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="premium-card p-4 mb-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <div style="font-size: 2rem; color: var(--color-gold); margin-right: 1rem;">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">Email</h5>
+                                <p class="mb-0"><a href="mailto:contact@hotelLotus.com"
+                                        style="color: var(--color-gold);">contact@hotelLotus.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Address -->
+                    <div class="premium-card p-4 mb-4">
+                        <div class="d-flex align-items-start mb-3">
+                            <div style="font-size: 2rem; color: var(--color-gold); margin-right: 1rem;">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-1">Address</h5>
+                                <p class="mb-0"><small>123 Luxury Avenue<br>Downtown, City 12345<br>Country</small></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hours -->
+                    <div class="premium-card p-4">
+                        <h5 class="graduate-text mb-3"><i class="fas fa-clock me-2"></i>Business Hours</h5>
+                        <div class="small">
+                            <p class="mb-2"><strong>Front Desk:</strong><br>24/7</p>
+                            <p class="mb-2"><strong>Reservations:</strong><br>8:00 AM - 8:00 PM</p>
+                            <p class="mb-0"><strong>Maintenance:</strong><br>7:00 AM - 10:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-5 bg-gradient fade-in-section">
+        <div class="container">
+            <h2 class="gradient-text mb-4 text-center">Visit Us</h2>
+            <div
+                style="width: 100%; height: 400px; background: rgba(0,0,0,0.3); border-radius: 12px; border: 2px solid var(--color-gold); display: flex; align-items: center; justify-content: center;">
+                <p class="text-muted text-center">
+                    <i class="fas fa-map" style="font-size: 3rem; margin-bottom: 1rem; display: block;"></i>
+                    Interactive Google Map would be embedded here
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-5 fade-in-section">
+        <div class="container">
+            <h2 class="gradient-text mb-5 text-center">Frequently Asked Questions</h2>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="premium-card p-4">
+                        <h5 class="text-gold mb-2"><i class="fas fa-question-circle me-2"></i>What is your cancellation
+                            policy?</h5>
+                        <p class="small mb-0">We offer free cancellation up to 48 hours before check-in. Cancellations
+                            made within 48 hours will incur charges based on the booking terms.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="premium-card p-4">
+                        <h5 class="text-gold mb-2"><i class="fas fa-question-circle me-2"></i>Is WiFi available?</h5>
+                        <p class="small mb-0">Yes, complimentary high-speed WiFi is available throughout the hotel in
+                            all guest rooms and public areas.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="premium-card p-4">
+                        <h5 class="text-gold mb-2"><i class="fas fa-question-circle me-2"></i>Do you have parking
+                            facilities?</h5>
+                        <p class="small mb-0">We offer complimentary valet parking for all guests. Self-parking is also
+                            available at additional rates.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="premium-card p-4">
+                        <h5 class="text-gold mb-2"><i class="fas fa-question-circle me-2"></i>What time is checkout?
+                        </h5>
+                        <p class="small mb-0">Standard checkout time is 11:00 AM. Late checkout can be arranged based on
+                            availability. Contact the front desk for details.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-md-4">
+                    <h5><i class="fas fa-crown gold me-2"></i>LOTUS Hotel</h5>
+                    <p>Luxury redefined. Experience extraordinary.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="booking.html">Book Now</a></li>
+                        <li><a href="rooms.html">Rooms</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Follow Us</h5>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr style="border-color: rgba(212,175,55,0.3);">
+            <div class="text-center py-3">
+                <p>&copy; 2024 LOTUS Hotel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/scripts.js"></script>
+
+</body>
+
+</html>

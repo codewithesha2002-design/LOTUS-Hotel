@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - LOTUS Hotel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/premium.css">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand brand-animate" href="../html/index.html">
+                <img src="../assets/images/logo.png" alt="LOTUS Logo" class="navbar-logo">
+                <span class="brand-text">LOTUS</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li><a class="nav-link" href="index.html">Home</a></li>
+                    <li><a class="nav-link" href="rooms.html">Rooms</a></li>
+                    <li><a class="nav-link active" href="booking.html">Book Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero-small" style="min-height: 30vh; display: flex; align-items: center;">
+        <div class="container text-center">
+            <h1 class="display-4 gradient-text mb-4">Secure Payment</h1>
+            <p class="lead">Complete your reservation</p>
+        </div>
+    </section>
+
+    <!-- Payment Section -->
+    <section class="py-5 fade-in-section">
+        <div class="container">
+            <div class="row">
+                <!-- Payment Form -->
+                <div class="col-lg-8">
+                    <div class="premium-card p-5">
+                        <!-- Booking Summary -->
+                        <h3 class="gradient-text mb-4">Order Summary</h3>
+                        <div class="booking-summary mb-5">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p><strong>Room:</strong> Deluxe Room</p>
+                                    <p><strong>Check-In:</strong> Jan 15, 2024</p>
+                                    <p><strong>Check-Out:</strong> Jan 18, 2024</p>
+                                </div>
+                                <div class="col-md-6 text-md-end">
+                                    <p><strong>Nights:</strong> 3</p>
+                                    <p><strong>Rate:</strong> $299/night</p>
+                                    <p style="font-size: 1.3rem;" class="text-gold"><strong>Total: $897</strong></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr style="border-color: rgba(212,175,55,0.3);">
+
+                        <!-- Payment Methods -->
+                        <h3 class="gradient-text mb-4 mt-5">Select Payment Method</h3>
+                        <div class="row g-3 mb-5">
+                            <!-- Credit Card -->
+                            <div class="col-md-6">
+                                <div class="payment-method" data-method="credit-card">
+                                    <i class="fas fa-credit-card"></i>
+                                    <h5>Credit Card</h5>
+                                    <p>Visa, MasterCard, American Express</p>
+                                </div>
+                            </div>
+
+                            <!-- Debit Card -->
+                            <div class="col-md-6">
+                                <div class="payment-method" data-method="debit-card">
+                                    <i class="fas fa-university"></i>
+                                    <h5>Debit Card</h5>
+                                    <p>Bank debit cards</p>
+                                </div>
+                            </div>
+
+                            <!-- Net Banking -->
+                            <div class="col-md-6">
+                                <div class="payment-method" data-method="net-banking">
+                                    <i class="fas fa-bank"></i>
+                                    <h5>Net Banking</h5>
+                                    <p>Direct bank transfer</p>
+                                </div>
+                            </div>
+
+                            <!-- Digital Wallet -->
+                            <div class="col-md-6">
+                                <div class="payment-method" data-method="digital-wallet">
+                                    <i class="fas fa-wallet"></i>
+                                    <h5>Digital Wallet</h5>
+                                    <p>Apple Pay, Google Pay, etc.</p>
+                                </div>
+                            </div>
+
+                            <!-- UPI (for India) -->
+                            <div class="col-md-6">
+                                <div class="payment-method" data-method="upi">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <h5>UPI</h5>
+                                    <p>Unified Payments Interface</p>
+                                </div>
+                            </div>
+
+                            <!-- Cryptocurrency -->
+                            <div class="col-md-6">
+                                <div class="payment-method disabled" style="opacity: 0.5; cursor: not-allowed;">
+                                    <i class="fas fa-bitcoin"></i>
+                                    <h5>Cryptocurrency</h5>
+                                    <p>Coming Soon</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Payment Details Box -->
+                        <div class="alert alert-info border-0 bg-transparent mb-4"
+                            style="border-left: 3px solid var(--color-gold);">
+                            <div id="paymentDetails">
+                                <p class="text-warning"><i class="fas fa-info-circle me-2"></i> Please select a payment
+                                    method above</p>
+                            </div>
+                        </div>
+
+                        <!-- Payment Form -->
+                        <form id="paymentForm">
+                            <input type="hidden" id="selectedPaymentMethod" name="paymentMethod">
+
+                            <h4 class="gradient-text mb-3">Payment Details</h4>
+
+                            <div class="mb-3">
+                                <label class="form-label">Cardholder Name *</label>
+                                <input type="text" class="form-control" placeholder="John Doe" required>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-md-8">
+                                    <label class="form-label">Card Number *</label>
+                                    <input type="text" class="form-control" placeholder="1234 5678 9012 3456" required>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="form-label">CVV *</label>
+                                    <input type="text" class="form-control" placeholder="123" maxlength="4" required>
+                                </div>
+                            </div>
+
+                            <div class="row mb-4">
+                                <div class="col-md-6">
+                                    <label class="form-label">Expiry Date *</label>
+                                    <input type="text" class="form-control" placeholder="MM/YY" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Billing ZIP Code *</label>
+                                    <input type="text" class="form-control" placeholder="12345" required>
+                                </div>
+                            </div>
+
+                            <!-- Security Notice -->
+                            <div class="alert alert-success border-0 mb-4"
+                                style="background-color: rgba(76, 175, 80, 0.15);">
+                                <i class="fas fa-lock text-success me-2"></i>
+                                <strong>Secure Payment</strong> - Your payment information is encrypted and secure
+                            </div>
+
+                            <!-- Terms -->
+                            <div class="form-check mb-4">
+                                <input class="form-check-input" type="checkbox" id="agreePayment" required>
+                                <label class="form-check-label" for="agreePayment">
+                                    I confirm my booking and authorize the payment
+                                </label>
+                            </div>
+
+                            <!-- Submit Buttons -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <button type="button" class="btn btn-outline-gold w-100" onclick="history.back()">
+                                        <i class="fas fa-arrow-left me-2"></i> Back
+                                    </button>
+                                </div>
+                                <div class="col-md-6">
+                                    <button type="submit" class="btn btn-gold w-100">
+                                        <i class="fas fa-lock me-2"></i> Pay $897
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Security & Support -->
+                <div class="col-lg-4">
+                    <div class="premium-card p-4 mb-4">
+                        <h5 class="gradient-text mb-3"><i class="fas fa-shield-alt me-2"></i>Security</h5>
+                        <ul class="list-unstyled small">
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>SSL Encrypted</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>PCI DSS Compliant</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Money-Back Guarantee</li>
+                            <li><i class="fas fa-check text-success me-2"></i>24/7 Support</li>
+                        </ul>
+                    </div>
+
+                    <div class="premium-card p-4 mb-4">
+                        <h5 class="gradient-text mb-3"><i class="fas fa-question-circle me-2"></i>Need Help?</h5>
+                        <p class="small mb-3">Our customer support team is here to assist you</p>
+                        <div class="d-grid gap-2">
+                            <a href="tel:+1234567890" class="btn btn-gold btn-sm">
+                                <i class="fas fa-phone me-2"></i>Call Us
+                            </a>
+                            <a href="mailto:support@hotelLotus.com" class="btn btn-outline-gold btn-sm">
+                                <i class="fas fa-envelope me-2"></i>Email Support
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="premium-card p-4">
+                        <h5 class="gradient-text mb-3"><i class="fas fa-file-contract me-2"></i>Cancellation Policy</h5>
+                        <p class="small mb-0">Free cancellation up to 48 hours before check-in. After that, one night's
+                            stay will be charged.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <section class="py-5 bg-gradient">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3 mb-3">
+                    <div class="trust-badge">
+                        <i class="fas fa-certificate text-gold" style="font-size: 2rem;"></i>
+                        <p class="mt-2 small">Verified Seller</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="trust-badge">
+                        <i class="fas fa-star text-gold" style="font-size: 2rem;"></i>
+                        <p class="mt-2 small">4.9/5 Rating</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="trust-badge">
+                        <i class="fas fa-users text-gold" style="font-size: 2rem;"></i>
+                        <p class="mt-2 small">10k+ Bookings</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="trust-badge">
+                        <i class="fas fa-award text-gold" style="font-size: 2rem;"></i>
+                        <p class="mt-2 small">Award Winning</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-md-4">
+                    <h5><i class="fas fa-crown gold me-2"></i>LOTUS Hotel</h5>
+                    <p>Luxury redefined. Experience extraordinary.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Legal</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Cancellation Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Contact</h5>
+                    <p>📞 +1 (234) 567-8900<br>✉️ payments@hotelLotus.com</p>
+                </div>
+            </div>
+            <hr style="border-color: rgba(212,175,55,0.3);">
+            <div class="text-center py-3">
+                <p>&copy; 2024 LOTUS Hotel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/scripts.js"></script>
+
+</body>
+
+</html>
