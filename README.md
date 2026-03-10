@@ -410,9 +410,9 @@ To enhance the website:
 
 ## 📞 Support & Contact
 
-- **Email**: info@lotushotel.com
-- **Phone**: +1 234 567 890
-- **Address**: 123 Luxury Ave, City, Country
+- **Email**: codewithesha2002-design@gmail.com
+- **Phone**: +91 780 757 2096
+- **Address**: GREEN VALLEY,SOLAN
 
 ## 📝 License
 
@@ -438,3 +438,4 @@ This project is proprietary to LOTUS Hotel. All rights reserved.
 **Status**: Active Development
 
 **Created with ❤️ by GitHub Copilot**
+
