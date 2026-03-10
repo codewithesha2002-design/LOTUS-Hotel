@@ -435,7 +435,6 @@ This project is proprietary to LOTUS Hotel. All rights reserved.
 
 **Last Updated**: March 2026
 **Version**: 1.0.0
-**Status**: Active Development
+**Status**: Active Development 
 
-**Created with ❤️ by GitHub Copilot**
 
