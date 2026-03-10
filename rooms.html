@@ -10,16 +10,16 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="../css/premium.css">
-    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <link rel="stylesheet" href="css/premium.css">
+    <link rel="icon" type="image/png" href="assets/images/logo.png?v=1.1">
 </head>
 
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container-fluid px-4">
-            <a class="navbar-brand brand-animate" href="../html/index.html">
-                <img src="../assets/images/logo.png" alt="LOTUS Logo" class="navbar-logo">
+            <a class="navbar-brand brand-animate" href="index.html">
+                <img src="assets/images/logo.png" alt="LOTUS Logo" class="navbar-logo">
                 <span class="brand-text">LOTUS</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -38,33 +38,61 @@
         </div>
     </nav>
 
-    <!-- Page Header -->
-    <section class="hero-small"
-        style="background: linear-gradient(135deg, rgba(44,50,62,0.9), rgba(26,26,26,0.9)), url('../assets/images/hero-bg.jpg'); background-size: cover; background-position: center; min-height: 40vh; display: flex; align-items: center;">
-        <div class="container text-center">
-            <h1 class="display-4 gradient-text mb-4 fade-in-section">Our Luxurious Rooms</h1>
-            <p class="lead fade-in-section">Experience elegance and comfort at LOTUS Hotel</p>
-        </div>
-    </section>
-
-    <!-- Room Filters -->
+    <!-- Rooms Section -->
     <section class="py-5 fade-in-section">
         <div class="container">
-            <div class="row mb-5">
-                <div class="col-lg-12 text-center">
-                    <h2 class="gradient-text mb-4">Select Your Perfect Room</h2>
-                    <div class="filter-buttons d-flex justify-content-center gap-3 flex-wrap">
-                        <button class="btn btn-gold filter-btn active" data-filter="all">All Rooms</button>
-                        <button class="btn btn-outline-gold filter-btn" data-filter="deluxe">Deluxe</button>
-                        <button class="btn btn-outline-gold filter-btn" data-filter="executive">Executive</button>
-                        <button class="btn btn-outline-gold filter-btn" data-filter="presidential">Presidential</button>
-                    </div>
-                </div>
-            </div>
-
             <!-- Rooms Grid -->
             <div class="row g-4" id="roomsContainer">
-                <!-- Rooms will be loaded by JavaScript -->
+                <!-- Deluxe Room -->
+                <div class="col-md-4 mb-4">
+                    <div class="premium-card h-100 overflow-hidden">
+                        <img src="assets/images/room3.jpg" alt="Deluxe Room" class="card-img-top property-img">
+                        <div class="p-4">
+                            <h4 class="text-gold">Deluxe Room</h4>
+                            <p class="small text-white-50 mb-3">Elegant comfort with city views and premium amenities.
+                                Experience refined urban living.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-gold mb-0">$250<span
+                                        class="small text-white-50">/night</span></span>
+                                <a href="room-details.html?id=3" class="btn btn-gold btn-sm">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Executive Suite -->
+                <div class="col-md-4 mb-4">
+                    <div class="premium-card h-100 overflow-hidden">
+                        <img src="assets/images/room2.jpg" alt="Executive Suite" class="card-img-top property-img">
+                        <div class="p-4">
+                            <h4 class="text-gold">Executive Suite</h4>
+                            <p class="small text-white-50 mb-3">Spacious luxury with separate living area and panoramic
+                                views for the discerning traveler.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-gold mb-0">$450<span
+                                        class="small text-white-50">/night</span></span>
+                                <a href="room-details.html?id=2" class="btn btn-gold btn-sm">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Presidential Suite -->
+                <div class="col-md-4 mb-4">
+                    <div class="premium-card h-100 overflow-hidden">
+                        <img src="assets/images/room1.jpg" alt="Presidential Suite" class="card-img-top property-img">
+                        <div class="p-4">
+                            <h4 class="text-gold">Presidential Suite</h4>
+                            <p class="small text-white-50 mb-3">The ultimate luxury experience. Unparalleled space,
+                                service, and breathtaking views.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="h5 text-gold mb-0">$850<span
+                                        class="small text-white-50">/night</span></span>
+                                <a href="room-details.html?id=1" class="btn btn-gold btn-sm">Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -140,7 +168,7 @@
         <div class="container">
             <div class="row mb-4">
                 <div class="col-md-4">
-                    <h5><i class="fas fa-crown gold me-2"></i>LOTUS Hotel</h5>
+                    <h5><img src="assets/images/logo.png" alt="Logo" class="logo-icon-img">LOTUS Hotel</h5>
                     <p>Luxury redefined. Experience extraordinary.</p>
                 </div>
                 <div class="col-md-4">
@@ -149,27 +177,32 @@
                         <li><a href="booking.html">Book Now</a></li>
                         <li><a href="gallery.html">Gallery</a></li>
                         <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
                     <h5>Follow Us</h5>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
+
+                        <a href="https://instagram.com/i__hype__in" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/codewithesha" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="http://linkedin.com/in/codewithesha2002" target="_blank"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/codewithesha2002-design" target="_blank"><i
+                                class="fab fa-github"></i></a>
                     </div>
                 </div>
             </div>
             <hr style="border-color: rgba(212,175,55,0.3);">
             <div class="text-center py-3">
-                <p>&copy; 2024 LOTUS Hotel. All rights reserved.</p>
+                <p>&copy; 2025 LOTUS Hotel. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/scripts.js"></script>
+    <script src="js/scripts.js"></script>
 
 </body>
 

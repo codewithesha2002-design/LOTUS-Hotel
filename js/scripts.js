@@ -174,13 +174,16 @@ function initializeGallery() {
     filterButtons.forEach(button => {
         button.addEventListener('click', function () {
             const filter = this.getAttribute('data-filter');
+            const parentSection = this.closest('section');
+            const itemsToFilter = parentSection.querySelectorAll('.gallery-item');
 
-            // Update active button
-            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Update active button within the same section
+            const siblings = this.parentElement.querySelectorAll('.filter-btn');
+            siblings.forEach(btn => btn.classList.remove('active'));
             this.classList.add('active');
 
             // Filter items with animation
-            galleryItems.forEach(item => {
+            itemsToFilter.forEach(item => {
                 const category = item.getAttribute('data-category');
 
                 if (filter === 'all' || category === filter) {
@@ -390,7 +393,7 @@ function showPaymentDetails(method) {
                     <div class="mb-3">
                         <p class="text-muted">Or scan QR code:</p>
                         <div class="text-center">
-                            <img src="../assets/images/qr-code.png" alt="UPI QR Code" style="max-width: 150px; border: 2px solid var(--color-gold); border-radius: 8px;">
+                            <img src="assets/images/qr-code.png" alt="UPI QR Code" style="max-width: 150px; border: 2px solid var(--color-gold); border-radius: 8px;">
                         </div>
                     </div>
                 </div>
@@ -609,7 +612,7 @@ async function submitBooking(data) {
     try {
         showNotification('Checking availability...', 'info');
 
-        const response = await fetch('../php/api-rooms.php?action=book', {
+        const response = await fetch('php/api-rooms.php?action=book', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -764,7 +767,7 @@ async function handlePaymentSubmit(e) {
 
 async function processRealPayment(data) {
     try {
-        const response = await fetch('../php/api-payment.php?action=process', {
+        const response = await fetch('php/api-payment.php?action=process', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -794,7 +797,7 @@ async function processRealPayment(data) {
 // ===== API FUNCTIONS =====
 async function submitContactForm(data) {
     try {
-        const response = await fetch('../php/api-contact.php', {
+        const response = await fetch('php/api-contact.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -818,7 +821,7 @@ async function submitContactForm(data) {
 
 async function submitBooking(data) {
     try {
-        const response = await fetch('../php/api-rooms.php', {
+        const response = await fetch('php/api-rooms.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -900,16 +903,22 @@ function viewRoomDetails(roomId) {
 
 // ===== LOADING SCREEN =====
 function showLoading() {
-    const loading = document.createElement('div');
-    loading.className = 'loading';
-    loading.innerHTML = '<div class="spinner"></div>';
-    document.body.appendChild(loading);
+    let loading = document.querySelector('.loading');
+    if (!loading) {
+        loading = document.createElement('div');
+        loading.className = 'loading';
+        loading.innerHTML = '<div class="spinner"></div>';
+        document.body.appendChild(loading);
+    }
+    loading.classList.add('active');
 }
 
 function hideLoading() {
     const loading = document.querySelector('.loading');
     if (loading) {
-        loading.remove();
+        loading.classList.remove('active');
+        // Optional: remove from DOM after fade out if you add transitions
+        // setTimeout(() => loading.remove(), 300);
     }
 }
 

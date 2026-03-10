@@ -29,34 +29,28 @@ A comprehensive 5-star luxury hotel website built with modern web technologies f
 
 ```
 HOTEL-WEBSITE/
-├── html/
-│   ├── index.html              # Home page with hero section
-│   ├── rooms.html              # Room listing with filters
-│   ├── booking.html            # Room booking page
-│   ├── payment.html            # Payment processing
-│   ├── gallery.html            # Image gallery
-│   ├── services.html           # Hotel services
-│   ├── about.html              # About LOTUS
-│   ├── contact.html            # Contact & inquiries
-│   ├── newsletter.html         # Newsletter signup
-│   └── room-details.html       # Individual room details
+├── index.html              # Home page (at root for easy server entry)
+├── rooms.html              # Room listing
+├── booking.html            # Room booking
+├── payment.html            # Payment processing
+├── gallery.html            # Image gallery
+├── services.html           # Hotel services
+├── about.html              # About LOTUS
+├── contact.html            # Contact & inquiries
+├── newsletter.html         # Newsletter signup
+├── room-details.html       # Individual room details
 ├── css/
-│   ├── premium.css            # Main premium styling with 3D effects
+│   ├── premium.css            # Main premium styling
 │   └── style.css              # Legacy styles
 ├── js/
-│   └── scripts.js              # Enhanced JavaScript with animations
+│   └── scripts.js              # Enhanced JavaScript
 ├── php/
 │   ├── config.php              # Database configuration
 │   ├── api-rooms.php           # Room management API
 │   ├── api-payment.php         # Payment processing API
-│   ├── api-contact.php         # Contact form API
-│   └── database.sql            # Database schema (in root)
+│   └── api-contact.php         # Contact form API
 ├── assets/
 │   └── images/                 # Hotel images & logo
-├── py/
-│   └── test_*.py               # Python test scripts
-├── json/
-│   └── *.json                  # Test results
 └── database_setup.sql          # MySQL database setup
 
 ```
@@ -107,7 +101,7 @@ php -S localhost:8000
 
 #### Access the website
 ```
-http://localhost:8000/html/index.html
+http://localhost:8000/index.html
 ```
 
 ## 🎯 Core Features
